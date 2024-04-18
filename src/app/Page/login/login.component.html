@@ -11,11 +11,11 @@
       <div class="title">Login Form</div>
       <form action="#">
         <div class="field">
-          <input type="text" />
+          <input type="text" required />
           <label>Email Address</label>
         </div>
         <div class="field">
-          <input type="password" />
+          <input type="password" required/>
           <label>Password</label>
         </div>
         <div class="content">
@@ -29,11 +29,11 @@
         </div>
 
         <div class="field">
-          <input type="submit" value="Login" />
+        <input type="submit" value="Login" (click)="login()"/>
         </div>
 
         <div class="signup-link">
-          Not a member? <a href="#">Signup now</a>
+          Not a member? <a href="register">Signup now</a>
         </div>
       </form>
     </div>

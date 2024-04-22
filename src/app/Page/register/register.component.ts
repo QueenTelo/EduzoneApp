@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { RegisterServiceService } from '../../services/register-service.service';
 import { FormsModule } from '@angular/forms';
-import { EMPTY, catchError } from 'rxjs';
+import { EMPTY, catchError, identity } from 'rxjs';
 
 @Component({
   selector: 'app-register',
@@ -18,9 +18,8 @@ export class RegisterComponent implements OnInit {
     email: '',
     password: '',
     Phonenumber: '',
-    pass: '',
-    idNo: '',
-    
+    passportNumber: '',
+    identityNumber: ''
   };
   ngOnInit(): void {
     this.service.refreshList();

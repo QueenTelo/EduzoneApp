@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class LoginServiceService {
   url: string = environment.apiBaseUrl;
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   register(register: any) {
     const httpOptions = {
@@ -19,4 +19,4 @@ export class LoginServiceService {
       httpOptions
     );
   }
-
+}

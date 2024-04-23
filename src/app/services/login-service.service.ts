@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class LoginServiceService {
   url: string = environment.apiBaseUrl;
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   login(login: any) {
     const httpOptions = {
@@ -19,6 +19,7 @@ export class LoginServiceService {
       httpOptions
     );
   }
+<<<<<<< HEAD
   refreshList() {
     return this.http.get(`${environment.apiBaseUrl}/Users/authenticate`); //.subscribe({
     //   next: (res) => {
@@ -31,3 +32,6 @@ export class LoginServiceService {
   }
 }
 
+=======
+}
+>>>>>>> b0f4e410a3b3ea21e799c90e8b4461d3185b2620

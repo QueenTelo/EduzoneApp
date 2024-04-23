@@ -11,12 +11,28 @@
       <div class="title">Login Form</div>
       <form action="#">
         <div class="field">
-          <input type="text" />
-          <label>Email Address</label>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input
+              type="text"
+              placeholder="Enter your email"
+              required
+              [(ngModel)]="login.Email"
+              name="Email"
+            />
+          </div>
         </div>
         <div class="field">
-          <input type="password" />
-          <label>Password</label>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input
+              type="text"
+              placeholder="Enter your password"
+              required
+              name="Password"
+              [(ngModel)]="login.Password"
+            />
+          </div>
         </div>
         <div class="content">
           <div class="checkbox">
@@ -29,7 +45,7 @@
         </div>
 
         <div class="field">
-          <input type="button" value="Login" routerLink="./home" (click)="login()" />
+          <input type="button" value="Login" routerLink="./home" (click)=" loginSave()" />
         </div>
 
         <div class="signup-link">

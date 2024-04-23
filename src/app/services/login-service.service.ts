@@ -9,14 +9,25 @@ export class LoginServiceService {
   url: string = environment.apiBaseUrl;
   constructor(private http: HttpClient) {}
 
-  register(register: any) {
+  login(login: any) {
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     };
     return this.http.post(
-      `${environment.apiBaseUrl}/Users`,
-      JSON.stringify(register),
+      `${environment.apiBaseUrl}/Users/authenticate`,
+      JSON.stringify(login),
       httpOptions
     );
   }
+  refreshList() {
+    return this.http.get(`${environment.apiBaseUrl}/Users/authenticate`); //.subscribe({
+    //   next: (res) => {
+    //     console.log(res);
+    //   },
+    //   error: (err) => {
+    //     console.log(err);
+    //   },
+    // });
+  }
+}
 

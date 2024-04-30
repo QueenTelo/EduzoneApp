@@ -19,7 +19,8 @@ export class RegisterComponent implements OnInit {
     password: '',
     Phonenumber: '',
     passportNumber: '',
-    identityNumber: ''
+    identityNumber: '',
+    profilePicture: null
   };
   ngOnInit(): void {
     this.service.refreshList();
@@ -35,5 +36,18 @@ export class RegisterComponent implements OnInit {
         })
       )
       .subscribe();
+
+    }
+
+    // Function to handle file selection
+    onFileSelected(event: any) {
+      const file: File = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (e: any) => {
+          this.registration.profilePicture = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
   }
 }

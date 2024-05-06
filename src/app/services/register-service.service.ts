@@ -14,14 +14,14 @@ export class RegisterServiceService {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
     };
     return this.http.post(
-      `${environment.apiBaseUrl}/Users`,
+      `${environment.apiBaseUrl}/Users/register`,
       JSON.stringify(register),
       httpOptions
     );
   }
 
   refreshList() {
-    return this.http.get(`${environment.apiBaseUrl}/Users`); //.subscribe({
+    return this.http.get(`${environment.apiBaseUrl}/Users/register`); //.subscribe({
     //   next: (res) => {
     //     console.log(res);
     //   },

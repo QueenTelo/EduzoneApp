@@ -69,8 +69,8 @@
                 type="text"
                 placeholder="Enter your number"
                 required
-                name="number"
-                [(ngModel)]="registration.Phonenumber"
+                name="phoneNumber"
+                [(ngModel)]="registration.phoneNumber"
               />
             </div>
             <div class="input-box">
@@ -115,7 +115,7 @@
             </div>
           </div>
           <div class="button">
-            <input type="submit" value="Register" (click)="save()" />
+            <input type="submit" value="Register" routerLink="./" (click)="save()" />
           </div>
         </form>
       </div>

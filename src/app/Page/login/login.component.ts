@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
 import { LoginServiceService } from '../../services/login-service.service';
 import { FormsModule } from '@angular/forms';
@@ -8,7 +8,7 @@ import { EMPTY, catchError, identity } from 'rxjs';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [HomeComponent, FormsModule],
+  imports: [HomeComponent, FormsModule, RouterLink],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
         })
       )
       .subscribe();
+      this.router.navigate(['/home']).then();
  
   }
 

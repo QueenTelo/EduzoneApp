@@ -1,0 +1,22 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+body,
+html {
+  height: 200%;
+  line-height: 1.8;
+ background: linear-gradient(-135deg, #71b7e6, #4158d0);
+}
+
+
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
